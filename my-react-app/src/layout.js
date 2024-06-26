@@ -2,6 +2,7 @@ import React from 'react';
 import { useState } from "react";
 import { useRef } from "react";
 import find_final_letter from './logic.js';
+import './style.css';
 
 function Layout(){
     var [name_1, sn1] = useState("");
@@ -13,8 +14,9 @@ function Layout(){
     };
     
     const layout = (
-        <div>
-            <h2>FLAMES</h2>
+        <body >
+            <div>
+            <h1>FLAMES</h1>
                 <label>Enter name 1
                     <input id="name_1" type="text" onChange={(e) => sn1(e.target.value)} />
                 </label>
@@ -23,7 +25,8 @@ function Layout(){
                 </label>
                 <button type="button" onClick={() => setOutput(name_1, name_2)}> Submit</button>
             <p id="output"></p>
-        </div>
+            </div>
+        </body>
     );
 return layout;
 };
